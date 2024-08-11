@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import Slider from "./Slider";
 
-const PopularProperties = () => {
+const NewProperty = () => {
   const slideData = [
     { _id: 1, title: "Book 1" },
     { _id: 2, title: "Book 2" },
@@ -16,7 +16,7 @@ const PopularProperties = () => {
     <div className="my-10 mx-20 ">
       <div className="flex justify-between gap-1 items-center my-5">
         <h1 className="text-2xl md:text-4xl font-semibold  my-3 text-nowrap">
-          Popular Properties
+          New Listed Properties
         </h1>
 
         <Link className="text-primary underline" href="/buy">
@@ -28,4 +28,4 @@ const PopularProperties = () => {
   );
 };
 
-export default PopularProperties;
+export default NewProperty;

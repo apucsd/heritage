@@ -5,6 +5,7 @@ import FindCard from "./FindCard";
 import States from "./States";
 
 import PopularProperties from "./PopularProperties";
+import NewProperty from "./NewProperty";
 
 const BuyListing = () => {
   return (
@@ -19,9 +20,9 @@ const BuyListing = () => {
           <FindCard />
         </div>
         <States />
-        {/*  */}
+
         <PopularProperties />
-        {/*  */}
+        <NewProperty />
       </div>
     </div>
   );
