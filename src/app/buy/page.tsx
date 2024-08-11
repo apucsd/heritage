@@ -1,8 +1,10 @@
+"use client";
 /* eslint-disable @next/next/no-img-element */
-import { SearchIcon } from "lucide-react";
 import React from "react";
 import FindCard from "./FindCard";
 import States from "./States";
+
+import PopularProperties from "./PopularProperties";
 
 const BuyListing = () => {
   return (
@@ -17,6 +19,9 @@ const BuyListing = () => {
           <FindCard />
         </div>
         <States />
+        {/*  */}
+        <PopularProperties />
+        {/*  */}
       </div>
     </div>
   );
