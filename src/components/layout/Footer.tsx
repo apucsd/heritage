@@ -160,7 +160,9 @@ const Footer = () => {
       <hr className="my-10 border-gray-400" />
       <div className="flex -mb-10 justify-between">
         <div>
-          <p>© Heritage Nest. All rights reserved.</p>
+          <p>
+            {new Date().getFullYear()} © Heritage Nest. All rights reserved.
+          </p>
         </div>
         <ul className="flex gap-4">
           <li>
