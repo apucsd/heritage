@@ -67,3 +67,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+.swiper-pagination-bullet-active {
+  background-color: orange !important;
+  border-radius: 0 !important;
+  width: 20px !important;
+  height: 6px !important;
+}

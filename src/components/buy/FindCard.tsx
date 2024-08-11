@@ -1,4 +1,4 @@
-import TabComponent from "./TabComponent";
+import TabComponent from "../../components/buy/TabComponent";
 const FindCard = () => {
   return (
     <div className="bg-white">

@@ -1,11 +1,12 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import FindCard from "./FindCard";
-import States from "./States";
+import States from "../../components/buy/States";
 
-import PopularProperties from "./PopularProperties";
-import NewProperty from "./NewProperty";
+import PopularProperties from "../../components/buy/PopularProperties";
+import NewProperty from "../../components/buy/NewProperty";
+import FindCard from "@/components/buy/FindCard";
+import Testimonial from "@/components/buy/Testimonial";
 
 const BuyListing = () => {
   return (
@@ -23,6 +24,7 @@ const BuyListing = () => {
 
         <PopularProperties />
         <NewProperty />
+        <Testimonial />
       </div>
     </div>
   );
