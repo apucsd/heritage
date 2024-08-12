@@ -1,6 +1,6 @@
 import React from "react";
 
-const SearchFiled = () => {
+const SearchFiled = ({ setSearchText }: { setSearchText: any }) => {
   return (
     <div className="relative">
       <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -21,6 +21,7 @@ const SearchFiled = () => {
         </svg>
       </div>
       <input
+        onChange={(e) => setSearchText(e.target.value)}
         type="search"
         id="default-search"
         className="block w-full p-4 ps-10 text-sm text-gray-900 border "

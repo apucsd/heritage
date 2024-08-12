@@ -166,7 +166,7 @@ const Footer = () => {
         </div>
         <ul className="flex gap-4">
           <li>
-            <a href="javascript:void(0)">
+            <a href="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -182,7 +182,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="javascript:void(0)" className="t ">
+            <a href="" className="t ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -198,7 +198,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="javascript:void(0)" className="t ">
+            <a href="" className="t ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -210,7 +210,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="javascript:void(0)" className="t ">
+            <a href="" className="t ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

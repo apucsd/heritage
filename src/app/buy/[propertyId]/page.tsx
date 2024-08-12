@@ -3,14 +3,7 @@
 import PopularProperties from "@/components/buy/PopularProperties";
 import OtherServices from "@/components/home/OtherServices";
 import { useGetSinglePropertyQuery } from "@/redux/api/propertyApi";
-import {
-  BathIcon,
-  BedIcon,
-  Boxes,
-  Building,
-  CoinsIcon,
-  MapPin,
-} from "lucide-react";
+import { BathIcon, BedIcon, Boxes, Building, MapPin } from "lucide-react";
 import React from "react";
 import BidProperty from "./BidProperty";
 import Map from "./Map";
@@ -19,7 +12,7 @@ import Amentites from "./Amentites";
 const PropertyDetails = ({ params }: { params: { propertyId: string } }) => {
   const id = params.propertyId;
   const { data, isFetching } = useGetSinglePropertyQuery(id);
-  if (isFetching) {
+  if (isFetching && !data) {
     return <p>Loading...</p>;
   }
   return (
@@ -45,7 +38,7 @@ const PropertyDetails = ({ params }: { params: { propertyId: string } }) => {
           </div>
 
           <div className="my-3 grid grid-cols-3 gap-3 ">
-            {data.images.map((img: string, id: string) => (
+            {data?.images.map((img: string, id: string) => (
               <img
                 key={id}
                 className="w-fit h-[160px] rounded "
@@ -61,19 +54,19 @@ const PropertyDetails = ({ params }: { params: { propertyId: string } }) => {
             <div className="bg-white grid grid-cols-4 p-3 shadow-lg">
               <div className="flex items-center gap-2">
                 <BedIcon className="size-5" />
-                <p>{data.bedrooms ? data.bedrooms : 0} Beds</p>
+                <p>{data?.bedrooms ? data.bedrooms : 0} Beds</p>
               </div>
               <div className="flex items-center gap-2">
                 <BathIcon className="size-5" />
-                <p>{data.bathrooms ? data.bathrooms : 0} Bath</p>
+                <p>{data?.bathrooms ? data.bathrooms : 0} Bath</p>
               </div>
               <div className="flex items-center gap-2">
                 <Building className="size-5" />
-                <p>{data.balcony ? data.balcony : 0} Balcony</p>
+                <p>{data?.balcony ? data?.balcony : 0} Balcony</p>
               </div>
               <div className="flex items-center gap-2">
                 <Boxes className="size-5" />
-                <p>{data.floors ? data.floors : 0} Fully Furnished</p>
+                <p>{data?.floors ? data?.floors : 0} Fully Furnished</p>
               </div>
             </div>
           </div>
@@ -81,12 +74,12 @@ const PropertyDetails = ({ params }: { params: { propertyId: string } }) => {
           <div className="grid grid-cols-3 p-4">
             <div>
               <p className="text-[#5C5C5C]">Carpet Area</p>
-              <h3>{data.total_area ? data.total_area : 100}</h3>
+              <h3>{data?.total_area ? data.total_area : 100}</h3>
               <p className="text-[#5C5C5C]">#$ 225/sqft</p>
             </div>
             <div>
               <p className="text-[#5C5C5C]">Floor</p>
-              <h3>{data.total_area ? data.total_area : 100}</h3>
+              <h3>{data?.total_area ? data.total_area : 100}</h3>
               <p className="text-[#5C5C5C]">2nd Floor</p>
             </div>
             <div>
