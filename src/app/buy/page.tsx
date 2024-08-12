@@ -7,6 +7,7 @@ import PopularProperties from "../../components/buy/PopularProperties";
 import NewProperty from "../../components/buy/NewProperty";
 import FindCard from "@/components/buy/FindCard";
 import Testimonial from "@/components/buy/Testimonial";
+import Link from "next/link";
 
 const BuyListing = () => {
   return (
@@ -22,7 +23,17 @@ const BuyListing = () => {
         </div>
         <States />
 
+        <div className="flex justify-between gap-1 items-center my-5 mx-20">
+          <h1 className="text-2xl md:text-4xl font-semibold  my-3 text-nowrap">
+            Popular Properties
+          </h1>
+
+          <Link className="text-primary underline" href="/buy">
+            See all property
+          </Link>
+        </div>
         <PopularProperties />
+
         <NewProperty />
         <Testimonial />
       </div>

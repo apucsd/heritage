@@ -1,18 +1,25 @@
+/* eslint-disable @next/next/no-img-element */
+import { Property } from "@/types";
 import { ImageIcon, MapPin } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
-const PropertyCard = () => {
+const PropertyCard = ({ data }: { data: Property }) => {
+  if (!data) return null;
   return (
-    <div className=" bg-[#F9FAFB] mx-auto  shadow-lg hover:shadow-xl">
+    <Link
+      href={`/buy/${data._id}`}
+      className=" bg-[#F9FAFB] mx-auto  shadow-lg hover:shadow-xl"
+    >
       <div className="relative flex items-end overflow-hidden ">
         <img
           className="w-full h-[200px]"
-          src="https://t3.ftcdn.net/jpg/00/29/13/38/360_F_29133877_bfA2n7cWV53fto2BomyZ6pyRujJTBwjd.jpg"
+          src={data?.images[0]}
           alt="Hotel Photo"
         />
         <div className="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
           <ImageIcon className="size-5 text-orange-400" />
-          <span className="font-bold ml-2">20</span>
+          <span className="font-bold ml-2">{data?.images?.length}</span>
         </div>
       </div>
 
@@ -27,15 +34,15 @@ const PropertyCard = () => {
           </div>
         </div>
         <div className="my-3">
-          <h2 className="font-semibold text-xl">The Hilton Hotel</h2>
+          <h2 className="font-semibold text-xl">{data.title}</h2>
           <p className="text-slate-400 mt-1 flex items-center gap-2">
-            <MapPin className="size-4 text-orange-500" /> Lisbon, Portugal
+            <MapPin className="size-4 text-orange-500" /> {data.location}
           </p>
 
-          <p className="font-semibold text-xl">$ 250000</p>
+          <p className="font-semibold text-xl">$ {data.price}</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

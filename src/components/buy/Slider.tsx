@@ -7,9 +7,11 @@ import { SwiperSlide, Swiper } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import PropertyCard from "@/components/ui/PropertyCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Property } from "@/types";
 
-const Slider = ({ data }: { data: any }) => {
+const Slider = ({ data }: { data: Property[] }) => {
   const swiperRef = useRef<any>(null);
+
   return (
     <div className="relative">
       <Swiper
@@ -40,9 +42,9 @@ const Slider = ({ data }: { data: any }) => {
         spaceBetween={30}
         className="mySwiper w-full"
       >
-        {data.map((item: any) => (
+        {data?.map((item: Property) => (
           <SwiperSlide className="" key={item._id}>
-            <PropertyCard />
+            <PropertyCard data={item} />
           </SwiperSlide>
         ))}
       </Swiper>
