@@ -1,6 +1,6 @@
+"use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import PropertyCard from "../ui/PropertyCard";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css/pagination";
 import TestimonialCard from "./TestimonialCard";
@@ -28,7 +28,7 @@ const TestimonialSlider = () => {
         className="mySwiper w-full"
       >
         {data.map((item: any) => (
-          <SwiperSlide className="" key={item._id}>
+          <SwiperSlide className="" key={item}>
             <TestimonialCard />
           </SwiperSlide>
         ))}

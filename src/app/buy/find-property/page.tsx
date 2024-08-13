@@ -18,9 +18,8 @@ const FindProperty = ({ searchParams }: { searchParams: PropertySearch }) => {
   const { data, isLoading } =
     useGetAllPropertyBySearchQueryQuery(newSearchParams);
   if (isLoading) return <p>Loading...</p>;
-  console.log(data);
   return (
-    <div className="px-20">
+    <div className="px-20 w-full">
       <div>
         <hr />
         <h1 className="text-2xl font-semibold p-3">

@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import Slider from "./Slider";
 import { useGetAllPropertyQuery } from "@/redux/api/propertyApi";
 

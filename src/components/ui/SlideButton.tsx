@@ -1,5 +1,5 @@
 "use client";
-import { ChevronLeft, ChevronRight, MoveLeft, MoveRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { useSwiper } from "swiper/react";
 const SlideButton = () => {
   const swiper = useSwiper();
