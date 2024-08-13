@@ -1,11 +1,13 @@
 "use client";
 import { useUpdateBidMutation } from "@/redux/api/propertyApi";
+import { useAppSelector } from "@/redux/hooks";
 import { Button, Slider } from "@nextui-org/react";
 import { useState, useEffect } from "react";
 import Swal from "sweetalert2";
 
 const BidProperty = ({ data }: { data: any }) => {
   const [rangeValue, setRangeValue] = useState<number[]>([0, 0]);
+  const { user } = useAppSelector((state) => state.auth);
 
   useEffect(() => {
     if (data.current_bid) {
@@ -18,6 +20,14 @@ const BidProperty = ({ data }: { data: any }) => {
   const [updateBid] = useUpdateBidMutation();
 
   const handleUpdateBid = async () => {
+    if (!user) {
+      Swal.fire({
+        title: "You need to be logged in to bid",
+        icon: "error",
+      });
+
+      return;
+    }
     const updateBidInfo = {
       id: data._id,
       data: {

@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Heritage - Your Ultimate Bidding Destination
 
-## Getting Started
+Welcome to **Heritage**, your premier platform for all your bidding needs! Whether you're a seasoned bidder or just getting started, **Heritage** provides a seamless and engaging experience for all.
 
-First, run the development server:
+## [Explore Heritage live here]()
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🎯 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Dynamic Property Listings**: Browse a diverse range of properties available for bidding, including residential, commercial and more!
+- **Efficient Search Functionality**: Quickly find properties that match your criteria with our advanced search and filte options.
+- **Real-Time Bidding**: Participate in live auctions and place your bids in real-time.
+- **Create and Manage Accounts**: Register and manage user profiles with ease.
+- **Secure Authentication**: Log in and out securely using industry-standard authentication methods.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Technology Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Next.js**: For lightning-fast performance and server-side rendering.
+- **TypeScript**: Enhancing code quality and developer productivity.
+- **Mongoose & Express**: For seamless backend development.
+- **Redux**: Providing a predictable and centralized store for data handling.
+- **Redux Persist**: Never lose your session data again.
+- **Swiper**: Interactive carousel navigation for a delightful browsing experience.
 
-## Learn More
+## 🛠️ Setup
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone** this repository to your local machine.
+   ```bash
+   git clone <repository-url>
+   ```
+2. **Install** dependencies using:
+   ```bash
+   npm install
+   ```
+3. **Start** the development server:
+   ```bash
+   npm run dev
+   ```
+4. **Open** your browser and navigate to `http://localhost:3000` to access **Heritage**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ℹ️ Additional Information
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Heritage** is committed to providing a smooth and enjoyable bidding experience for users everywhere. If you have any feedback or suggestions for improvement, please don't hesitate to reach out. Happy bidding! 📈✨

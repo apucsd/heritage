@@ -1,8 +1,18 @@
+"use client";
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import React from "react";
+import LoginModal from "../modal/LoginModal";
+import SignUpModal from "../modal/SignUpModal";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { Avatar } from "@nextui-org/react";
+import { logoutUser, setUser } from "@/redux/api/features/authSlice";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
+  const { user } = useAppSelector((state) => state.auth);
+  const dispatch = useAppDispatch();
+  console.log(user, "nambar");
   const navlinks = [
     { title: "Home", href: "/", id: 11 },
     { title: "Buy", href: "/buy", id: 1 },
@@ -65,27 +75,41 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <div className="flex items-center ml-auto space-x-6">
-          <Link href="/menage-rentals">Manage Rentals</Link>
-          <Link className="font-bold" href="/sign-up">
-            Sign up
-          </Link>
 
-          <button id="toggleOpen" className="lg:hidden">
-            <svg
-              className="w-7 h-7"
-              fill="#333"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+        {user ? (
+          <div className="flex items-center gap-8">
+            <Link href="/menage-rentals">Manage Rentals</Link>
+            <Avatar name={user.email} />
+            <button
+              className="font-semibold"
+              onClick={() => {
+                dispatch(logoutUser());
+                Swal.fire("You have been logged out");
+              }}
             >
-              <path
-                fillRule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </button>
-        </div>
+              Logout
+            </button>
+          </div>
+        ) : (
+          <div className="flex items-center ml-auto space-x-6">
+            <LoginModal />
+            <SignUpModal />
+            <button id="toggleOpen" className="lg:hidden">
+              <svg
+                className="w-7 h-7"
+                fill="#333"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        )}
       </div>
     </header>
   );
