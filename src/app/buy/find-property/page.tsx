@@ -1,9 +1,6 @@
-"use client";
-
-import { useGetAllPropertyBySearchQueryQuery } from "@/redux/api/propertyApi";
 import PropertySearchCard from "./PropertySearchCard";
 import NotFoundProduct from "./NotFoundProduct";
-import Loading from "@/loader/Loading";
+import { NEXT_PUBLIC_BACKEND_URl } from "@/const";
 
 interface PropertySearch {
   location?: string;
@@ -11,14 +8,24 @@ interface PropertySearch {
   budget?: string;
   searchField?: string;
 }
-
-const FindProperty = ({ searchParams }: { searchParams: PropertySearch }) => {
+const FindProperty = async ({
+  searchParams,
+}: {
+  searchParams: PropertySearch;
+}) => {
   const newSearchParams = Object.entries(searchParams)
     .filter(([key, value]) => value)
-    .map(([key, value]) => ({ name: key, value }));
-  const { data, isLoading } =
-    useGetAllPropertyBySearchQueryQuery(newSearchParams);
-  if (isLoading) return <Loading />;
+    .map(
+      ([key, value]) =>
+        `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+    )
+    .join("&");
+
+  const url = `${NEXT_PUBLIC_BACKEND_URl}/properties/search-query?${newSearchParams}`;
+
+  const res = await fetch(url);
+  const data = await res.json();
+
   return (
     <div className="px-2 md:px-20 w-full">
       <div>

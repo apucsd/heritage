@@ -1,1 +1,1 @@
-export const NEXT_PUBLIC_BACKEND_URl = "http://localhost:5000";
+export const NEXT_PUBLIC_BACKEND_URl = "https://heritage-server.vercel.app";

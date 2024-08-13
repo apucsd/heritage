@@ -130,7 +130,7 @@ export default function TabComponent() {
               className=" w-full"
               href={{
                 pathname: "/buy/find-property",
-                query,
+                query: query,
               }}
             >
               <Button
