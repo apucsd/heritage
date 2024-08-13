@@ -3,6 +3,7 @@
 import { useGetAllPropertyBySearchQueryQuery } from "@/redux/api/propertyApi";
 import PropertySearchCard from "./PropertySearchCard";
 import NotFoundProduct from "./NotFoundProduct";
+import Loading from "@/loader/Loading";
 
 interface PropertySearch {
   location?: string;
@@ -17,7 +18,7 @@ const FindProperty = ({ searchParams }: { searchParams: PropertySearch }) => {
     .map(([key, value]) => ({ name: key, value }));
   const { data, isLoading } =
     useGetAllPropertyBySearchQueryQuery(newSearchParams);
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <Loading />;
   return (
     <div className="px-20 w-full">
       <div>

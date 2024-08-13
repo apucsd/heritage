@@ -1,11 +1,12 @@
 "use client";
+import Loading from "../../loader/Loading";
 import Slider from "./Slider";
 import { useGetAllPropertyQuery } from "@/redux/api/propertyApi";
 
 const PopularProperties = () => {
   const { data, isFetching } = useGetAllPropertyQuery({});
   if (isFetching) {
-    return <p>Loading...</p>;
+    return <Loading />;
   }
 
   return (

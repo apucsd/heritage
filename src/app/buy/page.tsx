@@ -18,9 +18,11 @@ const BuyListing = () => {
           src="https://img.freepik.com/free-photo/large-sunny-room-with-wide-views-peaceful-feel_157027-4459.jpg?t=st=1723376593~exp=1723380193~hmac=06edc149db42c4f8638d206662eb4b861a7bd04b365b6a802fd8eaf3b4e72a29&w=1060"
           alt="img"
         />
+
         <div className="absolute z-10 shadow-2xl top-20 left-1/2 -translate-x-1/2 w-[990px] h-[400px] p-4 rounded-[4px] bg-white">
           <FindCard />
         </div>
+
         <States />
 
         <div className="flex justify-between gap-1 items-center my-5 mx-20">

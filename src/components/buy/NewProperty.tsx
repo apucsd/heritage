@@ -3,11 +3,12 @@ import Link from "next/link";
 
 import Slider from "./Slider";
 import { useGetAllPropertyQuery } from "@/redux/api/propertyApi";
+import Loading from "../../loader/Loading";
 
 const NewProperty = () => {
   const { data, isFetching } = useGetAllPropertyQuery({});
   if (isFetching) {
-    return <p>Loading...</p>;
+    return <Loading />;
   }
   return (
     <div className="my-10 mx-20 ">

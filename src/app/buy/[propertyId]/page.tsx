@@ -8,12 +8,13 @@ import React from "react";
 import BidProperty from "./BidProperty";
 import Map from "./Map";
 import Amentites from "./Amentites";
+import Loading from "@/loader/Loading";
 
 const PropertyDetails = ({ params }: { params: { propertyId: string } }) => {
   const id = params.propertyId;
   const { data, isFetching } = useGetSinglePropertyQuery(id);
   if (isFetching && !data) {
-    return <p>Loading...</p>;
+    return <Loading />;
   }
   return (
     <>
