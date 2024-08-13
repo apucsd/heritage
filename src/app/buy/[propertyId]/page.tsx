@@ -19,7 +19,7 @@ const PropertyDetails = ({ params }: { params: { propertyId: string } }) => {
   return (
     <>
       <div className="px-2 md:px-20 my-2 grid grid-cols-12 gap-4">
-        <div className="col-span-8">
+        <div className="col-span-12 md:col-span-8">
           <div className="flex justify-start gap-8">
             <h2 className="text-lg font-semibold">
               {data?.title} for Sale in {data?.location}
@@ -38,7 +38,7 @@ const PropertyDetails = ({ params }: { params: { propertyId: string } }) => {
             />
           </div>
 
-          <div className="my-3 grid grid-cols-3 gap-3 ">
+          <div className="hidden  my-3 md:grid grid-cols-3 gap-3 ">
             {data?.images.map((img: string, id: string) => (
               <img
                 key={id}
@@ -52,7 +52,7 @@ const PropertyDetails = ({ params }: { params: { propertyId: string } }) => {
           {/* overview */}
           <div className="p-5 space-y-3 bg-[#F9FAFB]">
             <h1 className="text-4xl font-semibold">Overview</h1>
-            <div className="bg-white grid grid-cols-4 p-3 shadow-lg">
+            <div className="bg-white grid grid-cols-2 md:grid-cols-4 p-3 shadow-lg">
               <div className="flex items-center gap-2">
                 <BedIcon className="size-5" />
                 <p>{data?.bedrooms ? data.bedrooms : 0} Beds</p>
@@ -72,7 +72,7 @@ const PropertyDetails = ({ params }: { params: { propertyId: string } }) => {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 p-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 p-4">
             <div>
               <p className="text-[#5C5C5C]">Carpet Area</p>
               <h3>{data?.total_area ? data.total_area : 100}</h3>
@@ -89,7 +89,7 @@ const PropertyDetails = ({ params }: { params: { propertyId: string } }) => {
               <p className="text-[#5C5C5C]">Transaction Type</p>
             </div>
           </div>
-          <div className="grid grid-cols-3 p-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 p-4">
             <div>
               <p className="text-[#5C5C5C]">Facing Area</p>
               <h3>{200} sqrt</h3>
@@ -108,7 +108,7 @@ const PropertyDetails = ({ params }: { params: { propertyId: string } }) => {
           </div>
         </div>
 
-        <div className="col-span-4  min-h-screen">
+        <div className="col-span-12 md:col-span-4  min-h-screen">
           <BidProperty data={data} />
           <div className="my-2">
             <h3>

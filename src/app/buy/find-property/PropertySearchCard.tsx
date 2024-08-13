@@ -9,14 +9,14 @@ const PropertySearchCard = ({ data }: { data: any }) => {
     <div className="w-full md:w-[80vw] bg-[#F9FAFB]  md:flex rounded p-[24px]">
       <div className="">
         <img
-          className="h-full rounded w-[252px] object-fill"
+          className="h-full rounded md:w-[252px] object-fill"
           src={data?.images[0]}
           alt=""
         />
       </div>
       <div className="  space-y-3 rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
         <div>
-          <div className="flex justify-start gap-8">
+          <div className="flex flex-wrap justify-start gap-8">
             <h2 className="text-lg font-semibold">
               {data?.title} for Sale in {data?.location}
             </h2>
@@ -42,11 +42,11 @@ const PropertySearchCard = ({ data }: { data: any }) => {
             <span className="block h-[2px] w-full bg-slate-200"></span>
           </div>
           <div
-            className="grid grid-cols-3 my-2
+            className="flex flex-wrap md:grid grid-cols-3 my-2
            space-y-3 w-full  items-center"
           >
             <div className="flex gap-3 w-full">
-              <div className="bg-orange-500 p-1 flex items-center">
+              <div className="bg-orange-500 p-1 flex px-2 items-center">
                 <LoaderIcon className="text-white" />
               </div>
               <div>
@@ -55,7 +55,7 @@ const PropertySearchCard = ({ data }: { data: any }) => {
               </div>
             </div>
             <div className="flex gap-3 w-full">
-              <div className="bg-orange-500 p-1 flex items-center ">
+              <div className="bg-orange-500 p-1 flex px-2 items-center ">
                 <LoaderIcon className="text-white" />
               </div>
               <div>
@@ -64,7 +64,7 @@ const PropertySearchCard = ({ data }: { data: any }) => {
               </div>
             </div>
             <div className="flex gap-3 w-full">
-              <div className="bg-orange-500 p-1 flex items-center">
+              <div className="bg-orange-500 p-1 flex px-2 items-center">
                 <LoaderIcon className="text-white" />
               </div>
               <div>
