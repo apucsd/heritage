@@ -12,7 +12,7 @@ import Swal from "sweetalert2";
 const Navbar = () => {
   const { user } = useAppSelector((state) => state.auth);
   const dispatch = useAppDispatch();
-  console.log(user, "nambar");
+  // console.log(user, "nambar");
   const navlinks = [
     { title: "Home", href: "/", id: 11 },
     { title: "Buy", href: "/buy", id: 1 },

@@ -1,8 +1,8 @@
 .container {
   --uib-size: 100px; /* Adjusted size */
-  --uib-color: black;
+  --uib-color: rgba(255, 166, 0, 0.726);
   --uib-speed: 1.3s;
-  --uib-bg-opacity: 0.1;
+  --uib-bg-opacity: 0.3;
   height: var(--uib-size);
   width: var(--uib-size);
   transform-origin: center;

@@ -5,9 +5,9 @@ function OtherServices() {
   return (
     <div className="container my-20  px-20 py-10">
       <h1 className="text-4xl font-bold text-center my-12">Other Services</h1>
-      <div className="flex justify-center gap-5 ">
+      <div className="grid grid-cols-1 md:grid-cols-3 justify-center  gap-5 ">
         <div className="flex  gap-2 w-full min-h-[200px]  bg-[#ECF5FF] p-5">
-          <div className="bg-[#EE6611] flex-grow size-[50px] rounded-[4px]">
+          <div className="bg-[#EE6611] flex-grow size-[50px] px-3 rounded-[4px]">
             <Home className="m-auto h-full text-white" />
           </div>
           <div className="space-y-2 col-span-10">
@@ -19,7 +19,7 @@ function OtherServices() {
           </div>
         </div>
         <div className="flex  gap-2 w-full min-h-[200px]  bg-[#ECF5FF] p-5">
-          <div className="bg-[#EE6611] flex-grow size-[50px] rounded-[4px]">
+          <div className="bg-[#EE6611] flex-grow size-[50px] px-3 rounded-[4px]">
             <Home className="m-auto h-full text-white" />
           </div>
           <div className="space-y-2 col-span-10">
@@ -33,7 +33,7 @@ function OtherServices() {
           </div>
         </div>
         <div className="flex  gap-2 w-full min-h-[200px]  bg-[#ECF5FF] p-5">
-          <div className="bg-[#EE6611] flex-grow size-[50px] rounded-[4px]">
+          <div className="bg-[#EE6611] flex-grow size-[50px] px-3 rounded-[4px]">
             <Home className="m-auto h-full text-white" />
           </div>
           <div className="space-y-2 col-span-10">

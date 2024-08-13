@@ -2,6 +2,7 @@
 import React from "react";
 import { Button } from "../ui/button";
 import { Search } from "lucide-react";
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -15,9 +16,11 @@ const Banner = () => {
             Seamlessly connecting you to the heartbeat of India's prime
             properties.
           </p>
-          <Button className="gap-3">
-            <Search className="w-6" /> Find Property
-          </Button>
+          <Link href={"/buy"}>
+            <Button className="gap-3">
+              <Search className="w-6" /> Find Property
+            </Button>
+          </Link>
         </div>
         <div className="absolute z-10 w-full h-full">
           <video autoPlay loop muted className="w-full h-full object-cover">
