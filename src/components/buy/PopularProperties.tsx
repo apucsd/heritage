@@ -10,7 +10,7 @@ const PopularProperties = () => {
   }
 
   return (
-    <div className="my-10 px-20 ">
+    <div className="my-10 px-8 md:px-20 ">
       <Slider data={data} />
     </div>
   );

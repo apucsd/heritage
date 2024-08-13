@@ -6,7 +6,7 @@ import React from "react";
 
 const PropertySearchCard = ({ data }: { data: any }) => {
   return (
-    <div className="w-[80vw] bg-[#F9FAFB]  md:flex rounded p-[24px]">
+    <div className="w-full md:w-[80vw] bg-[#F9FAFB]  md:flex rounded p-[24px]">
       <div className="">
         <img
           className="h-full rounded w-[252px] object-fill"

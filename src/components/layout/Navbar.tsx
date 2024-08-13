@@ -22,7 +22,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="flex  py-6 px-10 sm:px-20 bg-[#ECF5FF]  relative z-50">
+    <header className="flex  py-6 px-2 md:px-20 bg-[#ECF5FF]  relative z-50">
       <div className="flex flex-wrap items-center justify-between gap-4 w-full">
         <Link
           href="/"

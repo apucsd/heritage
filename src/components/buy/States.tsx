@@ -6,8 +6,8 @@ Button;
 
 const States = () => {
   return (
-    <section className="mt-32 mb-10 mx-20">
-      <div className="grid grid-cols-4 gap-5">
+    <section className="mt-32 mb-10 mx-2 md:mx-20">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
         <div className="bg-[#FDF0E7] space-y-3 relative mb-3 p-5">
           <p className="relative text-3xl font-black text-orange-500 sm:text-5xl">
             2K+

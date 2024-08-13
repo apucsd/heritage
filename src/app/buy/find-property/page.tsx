@@ -20,7 +20,7 @@ const FindProperty = ({ searchParams }: { searchParams: PropertySearch }) => {
     useGetAllPropertyBySearchQueryQuery(newSearchParams);
   if (isLoading) return <Loading />;
   return (
-    <div className="px-20 w-full">
+    <div className="px-2 md:px-20 w-full">
       <div>
         <hr />
         <h1 className="text-2xl font-semibold p-3">

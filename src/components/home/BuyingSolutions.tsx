@@ -43,12 +43,14 @@ const properties = [
 const PropertySolutions = () => {
   return (
     <div className="container px-10 mx-auto py-12 my-10">
-      <div className="mx-10 space-y-[200px]">
+      <div className="md:mx-10 space-y-[200px]">
         {properties.map((property) => (
           <div
             key={property.id}
-            className={`flex ${
-              property.id % 2 !== 0 ? "flex-row" : "flex-row-reverse"
+            className={` flex ${
+              property.id % 2 !== 0
+                ? "flex-col md:flex-row"
+                : "flex-col-reverse md:flex-row-reverse"
             } gap-4 h-full justify-between items-start`}
           >
             <div className="relative w-full">
@@ -58,7 +60,7 @@ const PropertySolutions = () => {
                 alt={`Property ${property.id}`}
               />
               <img
-                className={`absolute  left-[104px] ${
+                className={`absolute hidden md:block  left-[104px] ${
                   property.id % 2 !== 0
                     ? "top-[264px]"
                     : "-top-[100px] left-[104px]"
@@ -67,7 +69,7 @@ const PropertySolutions = () => {
                 alt={`Property ${property.id}`}
               />
               <div
-                className={`absolute ${
+                className={`absolute hidden md:block ${
                   property.id % 2 !== 0
                     ? " top-[228px] left-[422px]"
                     : "-top-[45px] left-[68px]"

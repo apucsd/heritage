@@ -19,7 +19,7 @@ const BuyListing = () => {
           alt="img"
         />
 
-        <div className="absolute z-10 shadow-2xl top-20 left-1/2 -translate-x-1/2 w-[990px] h-[400px] p-4 rounded-[4px] bg-white">
+        <div className="absolute z-10 shadow-2xl top-20 left-1/2 -translate-x-1/2 w-full md:w-[990px] h-[400px] p-4 rounded-[4px] bg-white">
           <FindCard />
         </div>
 
@@ -30,7 +30,7 @@ const BuyListing = () => {
             Popular Properties
           </h1>
 
-          <Link className="text-primary underline" href="/buy">
+          <Link className="text-primary hidden md:block underline" href="/buy">
             See all property
           </Link>
         </div>

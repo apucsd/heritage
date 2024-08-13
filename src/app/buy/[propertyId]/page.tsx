@@ -18,7 +18,7 @@ const PropertyDetails = ({ params }: { params: { propertyId: string } }) => {
   }
   return (
     <>
-      <div className="px-20 my-2 grid grid-cols-12 gap-4">
+      <div className="px-2 md:px-20 my-2 grid grid-cols-12 gap-4">
         <div className="col-span-8">
           <div className="flex justify-start gap-8">
             <h2 className="text-lg font-semibold">

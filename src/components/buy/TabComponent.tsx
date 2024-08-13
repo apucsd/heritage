@@ -63,7 +63,7 @@ export default function TabComponent() {
         <Tab key="Buy" title="Buy">
           <div>
             <SearchFiled setSearchText={setSearchText} />
-            <div className="grid grid-cols-3 gap-3 my-5">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 my-5">
               <div>
                 <h2 className="flex items-center gap-2 my-4 font-semibold text-lg">
                   <span>

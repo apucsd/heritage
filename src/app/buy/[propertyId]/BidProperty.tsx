@@ -9,6 +9,7 @@ const BidProperty = ({ data }: { data: any }) => {
   const [rangeValue, setRangeValue] = useState<number[]>([0, 0]);
   const { user } = useAppSelector((state) => state.auth);
 
+  const [updateBid] = useUpdateBidMutation();
   useEffect(() => {
     if (data.current_bid) {
       const minBid = data?.current_bid;
@@ -16,9 +17,6 @@ const BidProperty = ({ data }: { data: any }) => {
       setRangeValue([minBid, maxBid]);
     }
   }, [data.current_bid]);
-
-  const [updateBid] = useUpdateBidMutation();
-
   const handleUpdateBid = async () => {
     if (!user) {
       Swal.fire({
