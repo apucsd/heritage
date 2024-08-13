@@ -126,22 +126,22 @@ export default function TabComponent() {
             </div>
           </div>
           <div>
-            <Button
-              size="md"
-              className="w-full py-2"
-              radius="sm"
-              color="primary"
+            <Link
+              className=" w-full"
+              href={{
+                pathname: "/buy/find-property",
+                query,
+              }}
             >
-              <Link
-                className="flex items-center gap-3 w-full"
-                href={{
-                  pathname: "/buy/find-property",
-                  query,
-                }}
+              <Button
+                size="md"
+                className="w-full py-2"
+                radius="sm"
+                color="primary"
               >
                 <SearchIcon className="size-6" /> Find Property
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </div>
         </Tab>
         <Tab key="Rent" title="Rent">
